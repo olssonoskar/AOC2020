@@ -14,12 +14,12 @@ internal object InputUtils {
         return getFromResources(file).readLines().toCollection(arrayListOf())
     }
 
-    private fun getString(file : String, separator : String = ",") : String {
-        return getFromResources(file).readLines().reduce{a, b -> "$a$separator$b"}
+    fun getString(file : String) : String {
+        return getFromResources(file).readText()
     }
 
     fun getStrings(file : String, separator : String = ",") : List<String> {
-        return getString(file, separator).split(separator)
+        return getString(file).split(separator)
     }
 
     fun getInts(file: String) : List<Int> {
