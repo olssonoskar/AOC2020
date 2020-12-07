@@ -18,7 +18,7 @@ internal object InputUtils {
         return getFromResources(file).readText()
     }
 
-    fun getStrings(file : String, separator : String = ",") : List<String> {
+    fun getStrings(file : String, separator : String = "\n") : List<String> {
         return getString(file).split(separator)
     }
 
