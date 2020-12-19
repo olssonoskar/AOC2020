@@ -23,11 +23,11 @@ internal object InputUtils {
     }
 
     fun getInts(file: String) : List<Int> {
-        return getStrings(file).map { it.toInt() }
+        return getStrings(file).map { it.trim().toInt() }
     }
 
     fun getLongs(file: String) : List<Long> {
-        return getStrings(file).map { it.toLong() }
+        return getStrings(file).map { it.trim().toLong() }
     }
 
     fun equallySplitList(input : String, length : Int = 1, isFile : Boolean = true) : List<String> {
